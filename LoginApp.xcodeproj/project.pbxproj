@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		3C28FA19296D745E0089873F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C28FA18296D745E0089873F /* AppDelegate.swift */; };
 		3C28FA1B296D745E0089873F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C28FA1A296D745E0089873F /* SceneDelegate.swift */; };
-		3C28FA1D296D745E0089873F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C28FA1C296D745E0089873F /* ViewController.swift */; };
+		3C28FA1D296D745E0089873F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C28FA1C296D745E0089873F /* LoginViewController.swift */; };
 		3C28FA20296D745E0089873F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C28FA1E296D745E0089873F /* Main.storyboard */; };
 		3C28FA22296D745F0089873F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C28FA21296D745F0089873F /* Assets.xcassets */; };
 		3C28FA25296D745F0089873F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C28FA23296D745F0089873F /* LaunchScreen.storyboard */; };
+		3C28FA2D296D74980089873F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C28FA2C296D74980089873F /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C28FA15296D745E0089873F /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C28FA18296D745E0089873F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C28FA1A296D745E0089873F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3C28FA1C296D745E0089873F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C28FA1C296D745E0089873F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C28FA1F296D745E0089873F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C28FA21296D745F0089873F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C28FA24296D745F0089873F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C28FA26296D745F0089873F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C28FA2C296D74980089873F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				3C28FA18296D745E0089873F /* AppDelegate.swift */,
 				3C28FA1A296D745E0089873F /* SceneDelegate.swift */,
-				3C28FA1C296D745E0089873F /* ViewController.swift */,
+				3C28FA1C296D745E0089873F /* LoginViewController.swift */,
+				3C28FA2C296D74980089873F /* WelcomeViewController.swift */,
 				3C28FA1E296D745E0089873F /* Main.storyboard */,
 				3C28FA21296D745F0089873F /* Assets.xcassets */,
 				3C28FA23296D745F0089873F /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C28FA1D296D745E0089873F /* ViewController.swift in Sources */,
+				3C28FA1D296D745E0089873F /* LoginViewController.swift in Sources */,
+				3C28FA2D296D74980089873F /* WelcomeViewController.swift in Sources */,
 				3C28FA19296D745E0089873F /* AppDelegate.swift in Sources */,
 				3C28FA1B296D745E0089873F /* SceneDelegate.swift in Sources */,
 			);
@@ -302,9 +306,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = KirillTaraturin.LoginApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,9 +337,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = KirillTaraturin.LoginApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
