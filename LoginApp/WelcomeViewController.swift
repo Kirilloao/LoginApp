@@ -15,12 +15,9 @@ class WelcomeViewController: UIViewController {
     
     var welcome: String!
     
-    var emptyPassword: String!
-    var emptyUserName: String!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeTF.text = welcome
+        welcomeTF.text = "Welcome, \(welcome ?? "")" 
   
     }
 
