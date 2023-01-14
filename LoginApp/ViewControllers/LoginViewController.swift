@@ -21,11 +21,28 @@ class LoginViewController: UIViewController {
         passwordTF.autocorrectionType = UITextAutocorrectionType.no
         userNameTF.autocorrectionType = UITextAutocorrectionType.no
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.welcome = userNameTF.text
-    }
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeViewController = viewController as? WelcomeViewController {
+                welcomeViewController.welcome = "Kirill Taraturin"
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let personInfoVC =
+                        navigationVC.topViewController as? PersonInfoViewController else { return }
+                personInfoVC.title = "Kirill Taraturin"
+                personInfoVC.view.backgroundColor = .yellow
+            }
+               
+            }
+        }
+
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        welcomeVC.welcome = userNameTF.text
+//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
