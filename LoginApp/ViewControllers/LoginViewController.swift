@@ -12,9 +12,6 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var userNameTF: UITextField!
     
-    private var user = "User"
-    private var password = "Password"
-
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordTF.isSecureTextEntry = true
@@ -27,22 +24,15 @@ class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeViewController = viewController as? WelcomeViewController {
-                welcomeViewController.welcome = "Kirill Taraturin"
+                welcomeViewController.welcome = "\(myInfo.name) \(myInfo.surname)"
             } else if let navigationVC = viewController as? UINavigationController {
                 guard let personInfoVC =
                         navigationVC.topViewController as? PersonInfoViewController else { return }
-                personInfoVC.title = "Kirill Taraturin"
+                personInfoVC.title = "\(myInfo.name) \(myInfo.surname)"
                 personInfoVC.view.backgroundColor = .yellow
             }
-               
             }
         }
-
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-//        welcomeVC.welcome = userNameTF.text
-//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -50,7 +40,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInDidTapped() {
-        guard userNameTF.text == user, passwordTF.text == password else {
+        guard userNameTF.text == myInfo.userName, passwordTF.text == myInfo.userPassword else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password",
@@ -66,8 +56,8 @@ class LoginViewController: UIViewController {
     }
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Hey!", message: "Your user name is \(user)")
-        : showAlert(title: "Hey!", message: "Your password is \(password)")
+        ? showAlert(title: "Hey!", message: "Your user name is \(myInfo.userName)")
+        : showAlert(title: "Hey!", message: "Your password is \(myInfo.userPassword)")
     }
     
     private func showAlert(title: String, message: String, textFiled: UITextField? = nil) {
