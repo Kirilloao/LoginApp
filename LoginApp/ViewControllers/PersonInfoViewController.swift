@@ -17,15 +17,32 @@ class PersonInfoViewController: UIViewController {
     @IBOutlet var userWorkLabel: UILabel!
     @IBOutlet var userGradeLabel: UILabel!
     
+    
+    @IBOutlet var userNameLabelTInfo: UILabel!
+    @IBOutlet var userSurnameLabelInfo: UILabel!
+    @IBOutlet var userPhoneLabelInfo: UILabel!
+    @IBOutlet var userEmailLabelInfo: UILabel!
+    @IBOutlet var userHobbyLabelInfo: UILabel!
+    @IBOutlet var userWorkLabelInfo: UILabel!
+    @IBOutlet var userGradeLabelInfo: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userNameLabel.text = "Name: \(myInfo.name)"
-        userSurnameLabel.text = "Surname: \(myInfo.surname)"
-        userPhoneLabel.text = "Phone: \(myInfo.userPhone)"
-        userEmailLabel.text = "Email: \(myInfo.userEmali)"
-        userHobbyLabel.text = "Hobby: \(myInfo.userHobby)"
-        userWorkLabel.text = "Work: \(myInfo.userWork)"
-        userGradeLabel.text = "Grade: \(myInfo.userGrade)"
+        userNameLabel.text = "Name: "
+        userSurnameLabel.text = "Surname: "
+        userPhoneLabel.text = "Phone: "
+        userEmailLabel.text = "Email: "
+        userHobbyLabel.text = "Hobby: "
+        userWorkLabel.text = "Work: "
+        userGradeLabel.text = "Grade: "
+        
+        userNameLabelTInfo.text = myInfo.name
+        userSurnameLabelInfo.text = myInfo.surname
+        userPhoneLabelInfo.text = myInfo.userPhone
+        userEmailLabelInfo.text = myInfo.userEmali
+        userHobbyLabelInfo.text = myInfo.userHobby
+        userWorkLabelInfo.text = myInfo.userWork
+        userGradeLabelInfo.text = myInfo.userGrade
     }
 }
